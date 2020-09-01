@@ -26,3 +26,8 @@ None.
 The code should be used as follows:
 1. On create, assign an _avl_tree_t*_ pointer to the return value of make_avl_tree().
 2. Use the operations _avl_insert(avl_tree_t*, char*)_, _avl_search(avl_tree_t*, char*)_, and _avl_delete(avl_tree_t*, char*)_.
+
+## Notes
+
+This AVL tree uses max-left-subtree replacement for deleting a node with two children (i.e. the in-order predecessor).
+Other implementations may use min-right-subtree replacement (i.e. the in-order successor).
