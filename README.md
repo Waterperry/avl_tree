@@ -1,7 +1,7 @@
 # avl_tree
 
 ## Description
-This is a fully functioning AVL Tree. The code is split into two header files and a test driver function (main.c).
+This is the C code for an AVL (self-balancing binary) Tree. The code is split into two header files and a test driver function (main.c).
 
 ## Topography
 
@@ -22,3 +22,9 @@ Check that you have the required dependencies.
 
 You will need the "string_ops.h" file too in a subdirectory called 'tom' unless you wish to implement your own
 _append(char*,char)_ function.
+
+## Usage
+
+The code should be used as follows:
+1. On create, assign an _avl_tree_t*_ pointer to the return value of make_avl_tree().
+2. Use the operations _avl_insert(avl_tree_t*, char*)_, _avl_search(avl_tree_t*, char*)_, and _avl_delete(avl_tree_t*, char*)_.
