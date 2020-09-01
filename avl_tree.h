@@ -14,7 +14,7 @@ avl_tree_t *make_avl_tree(void);
 void avl_insert(avl_tree_t*, char*);
 void avl_delete(avl_tree_t*, char*);
 void print_avl_tree(avl_tree_t*);
-int in_avl_tree(avl_tree_t*, char*);
+int avl_search(avl_tree_t*, char*);
 
 //INTERNAL FUNCTIONS
 void avl_balance_above(avl_tree_t*,avl_node_t*);
@@ -71,7 +71,7 @@ void print_avl_tree(avl_tree_t *t){
     print_avl_node(t->root, 0);
 }
 
-int in_avl_tree(avl_tree_t *t, char *s){
+int avl_search(avl_tree_t *t, char *s){
     if(s==NULL) return 0; //no null values in tree
     avl_node_t *tmp = t->root;
     while(1){

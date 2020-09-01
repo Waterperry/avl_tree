@@ -16,26 +16,26 @@ int main(void){
     assert(!strcmp(t->root->l->s, "Echo"));
 
     printf("Testing search.\n");
-    assert(!in_avl_tree(t, NULL));
-    assert(in_avl_tree(t,"Foxtrot"));
-    assert(in_avl_tree(t,"Golf"));
-    assert(in_avl_tree(t, "Echo"));
-    assert(!in_avl_tree(t, "Blah"));
-    assert(!in_avl_tree(t, ""));
-    assert(!in_avl_tree(t, "."));
-    assert(!in_avl_tree(t, "asdfa]}{\\§sdfkjaerbflakw-+.;'§ef"));
+    assert(!avl_search(t, NULL));
+    assert(avl_search(t, "Foxtrot"));
+    assert(avl_search(t, "Golf"));
+    assert(avl_search(t, "Echo"));
+    assert(!avl_search(t, "Blah"));
+    assert(!avl_search(t, ""));
+    assert(!avl_search(t, "."));
+    assert(!avl_search(t, "asdfa]}{\\§sdfkjaerbflakw-+.;'§ef"));
 
     printf("Testing delete (no children).\n");
     avl_delete(t, "Golf");
-    assert(!in_avl_tree(t,"Golf"));
+    assert(!avl_search(t, "Golf"));
     assert(t->root->r == NULL);
-    assert(in_avl_tree(t,"Foxtrot"));
-    assert(in_avl_tree(t,"Echo"));
+    assert(avl_search(t, "Foxtrot"));
+    assert(avl_search(t, "Echo"));
 
     printf("Testing delete (1 child).\n");
     avl_delete(t,"Foxtrot");
-    assert(!in_avl_tree(t,"Foxtrot"));
-    assert(in_avl_tree(t, "Echo"));
+    assert(!avl_search(t, "Foxtrot"));
+    assert(avl_search(t, "Echo"));
 
     printf("Testing rotation (RL - RR).\n");
     avl_insert(t, "Golf");
