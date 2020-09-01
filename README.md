@@ -19,8 +19,7 @@ Check that you have the required dependencies.
 
 ## Dependencies
 
-You will need the "string_ops.h" file too in a subdirectory called 'tom' unless you wish to implement your own
-_append(char*,char)_ function.
+None.
 
 ## Usage
 
