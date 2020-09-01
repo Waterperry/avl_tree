@@ -1,0 +1,4 @@
+cmake-build-debug/
+*.iws
+workspace.xml
+tasks.xml
