@@ -3,7 +3,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include "avl_node.h"
+#include "string_ops.h"
+#ifndef STRING_OPS
 #include <tom/string_ops.h>
+#endif  //STRING_OPS
 
 typedef struct avl_tree_t {
     avl_node_t *root;
